@@ -1,0 +1,1 @@
+메모지 아이콘 - note-sticky(fontawesome)

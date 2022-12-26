@@ -7,9 +7,60 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kk_layout.css">
     <link rel="stylesheet" href="css/kk_theme.css">
+    <link rel="stylesheet" href="css/kk_icon.css">
     <title>EDMS UI</title>
 </head>
 <body>
-    
+    <!-- div html5viewer -->
+    <div id="toolBar" class="toolBar enableEdit">
+            <!-- 하드코딩 : enabelEdit 임의로 적어둠 -->
+        <div class="buttonBar">
+            <div class="section sec_viewer sec_save">
+                <a u-id="save" ref="imgSave" class="kk_btn ui_icon" title="편집저장" label="편집저장"><i class="kk-icon-save"></i></a>
+                <a u-id="print" ref="btnPrint" class="kk_selectbox ui_icon" mode="combo" title="프린트" label="프린트"><i class="kk-icon-print"></i></a>
+                <a u-id="transfer" ref="imgSave" class="kk_btn ui_icon" title="외부전송" label="외부전송"><i class="kk-icon-vertical_align_top"></i></a>
+                <div class="sectionTab">파일/인쇄</div>
+            </div> 
+            <div class="section sec_viewer sec_mode">  
+                <a u-id="thumbView" ref="btnThumb" class="kk_btn ui_icon active" title="썸네일보기" label="썸네일보기"><i class="kk-icon-chrome_reader_mode"></i></a>
+                <a u-id="thumbList" ref="btnThumb" class="kk_btn ui_icon" title="썸네일목록" label="썸네일목록"><i class="kk-icon-view_module"></i></a>
+                <a u-id="toggleShape" ref="btnToggle" class="kk_btn ui_icon active" title="주석보기" label="주석보기"><i class="kk-icon-object-group" style="font-size:16px;"></i></a>						
+                <a u-id="dragscroll" ref="btnDragPage" class="kk_btn ui_icon" title="선택이동" label="선택이동"><i class="kk-icon-pan_tool" style="font-size:16px;"></i></a>
+                <div class="sectionTab">모드</div>
+            </div> 
+            <div class="section sec_viewer sec_zoom">  		
+                <a u-id="zoomout" ref="btnZoom" class="kk_btn ui_icon" title="축소"><i class="kk-icon-zoom_out"></i></a>
+                <div class="status zoom" ref="btnZoom" id="kk_zoomSlider"></div>
+                <a u-id="zoomin" ref="btnZoom" class="kk_btn ui_icon" title="확대" label="확대"><i class="kk-icon-zoom_in"></i></a>
+                <a u-id="zoomdefault" ref="btnZoom" class="kk_btn ui_icon" title="100%" label="100%"><i class="kk-icon-youtube_searched_for"></i></a>
+                <a u-id="fitWidth" ref="btnFit" class="kk_btn ui_icon" title="폭맞춤" label="폭맞춤"><i class="kk-icon-arrows-h" style="font-size:20px;"></i></a>
+                <a u-id="fitHeight" ref="btnFit" class="kk_btn ui_icon" title="높이맞춤" label="높이맞춤"><i class="kk-icon-arrows-v" style="font-size:20px;"></i></a>
+                <a u-id="fitAll" ref="btnZoom" class="kk_btn ui_icon" title="화면맞춤" label="화면맞춤"><i class="kk-icon-crop_free"></i></a>
+            </div> 
+            <div class="section sec_viewer sec_rotate">
+                <a u-id="prevPage" ref="btnPageNav" class="kk_btn ui_icon" title="이전페이지" label="이전페이지"><i class="kk-icon-arrow_back"></i></a>
+                <div class="status pageInfo" ref="btnPageNav"><span id="kk_currentPage">1</span>/<span id="kk_totalPage"></span></div>
+                <a u-id="nextPage" ref="btnPageNav" class="kk_btn ui_icon" title="다음페이지" label="다음페이지"><i class="kk-icon-arrow_forward"></i></a>
+                <a u-id="rotateLeft" ref="btnRotate" class="kk_btn ui_icon" title="-90도회전" label="-90도회전"><i class="kk-icon-rotate_left"></i></a>
+                <a u-id="rotateRight" ref="btnRotate" class="kk_btn ui_icon" title="90도회전" label="90도회전"><i class="kk-icon-rotate_right"></i></a>
+                <a u-id="rotateRight180" ref="btnRotate" class="kk_btn ui_icon" title="180도회전" label="180도회전"><i class="kk-icon-refresh"></i></a>
+                <a u-id="rotateRightAll" ref="btnRotate" class="kk_btn ui_icon" title="전체회전" label="전체회전"><i class="kk-icon-crop_rotate"></i></a>
+
+                <div class="sectionTab">이동/회전</div>
+            </div>
+            <div class="section sec_edit sec_tools">
+                <a u-id="imgMasking" ref="imgShape" class="kk_btn ui_icon" title="마스킹" label="마스킹"><i class="kk-icon-square"></i></a>
+                <a u-id="insertMemo" ref="imgShape" class="kk_btn ui_icon ui_icon" title="메모" label="메모"><i class="kk-icon-sticky-note-o"></i></a>
+                <a u-id="insertShape" ref="imgShape" class="kk_selectbox ui_icon" mode="combo" val="1" title="주석" label="주석"><i class="kk-icon-format_shapes"></i></a>
+                <a u-id="imgCrop" ref="imgCrop" class="kk_btn ui_icon" title="자르기" label="자르기"><i class="kk-icon-crop"></i></a>                
+                <div class="sectionTab">편집</div>
+            </div>
+            <div class="section sec_edit sec_style">
+                <a u-id="shapeBackgroundColor" ref="imgShape" class="kk_colorpicker ui_icon" color="dddddd" title="배경색" label="배경색"><i class="kk-icon-format_color_fill"></i></a>
+                <a u-id="shapeBorderColor" ref="imgShape" class="kk_colorpicker ui_icon" title="선색" label="선색"><i class="kk-icon-border_color"></i></a>
+                <div class="sectionTab">도구</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

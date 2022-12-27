@@ -217,8 +217,11 @@
 		.enableEdit .buttonBar .section[item="4"] { width:300px; }
 		.enableEdit .buttonBar .section[item="4"] .shapes {display:inline-block; vertical-align:middle; width:78px; height:46px;}
 		.enableEdit .buttonBar .section[item="4"] .iconBundle a {float:left;}
-		.enableEdit .buttonBar .section[item="4"] .drawFigure {display:inline-block; vertical-align:middle; width:78px; height:46px; border:1px solid #ccc; background-color:white;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure {position:relative; display:inline-block; vertical-align:middle; width:100px; height:46px; border:1px solid #ccc; background-color:white;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure div:nth-child(2) .ui_icon {position:absolute;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure  .arrow {position:absolute; right:0; width:20px; height:46px;border:1px solid black;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure  .arrow a {padding-top:13px;}		
+
 		.enableEdit .buttonBar .section[item="5"] { width:202px; }
 		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle; width:152px; height:46px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {width:152px; height:20px; padding-bottom:3px;}

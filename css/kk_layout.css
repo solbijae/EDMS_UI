@@ -72,6 +72,11 @@
 	.deskView .lSideView .slideWrap .slide{transform-origin:left top;transform:scale(0.2,0.2);margin:0;border:none;overflow:hidden;}
 	.deskView .lSideView .slideWrap[loaded="loading"] .slide{/*background:url(../../images/squares.gif) no-repeat 50% 50%;*/}
 
+
+	.deskView .lSideToggle {z-index:999; position:absolute; left:150px; background-color:red;}
+	.deskView .lSideToggle i {position:absolute; top:50%;}
+
+
 	.deskView .editView .currentSlide{position:relative;margin-left:0;margin-right:0; /*background-color:#ffffff;border:1px solid #ccc;*/}
 	.deskView .editView .currentSlide .pWrap .highlight { position:absolute; top:0; left:0; right:0; bottom:0; background-color:rgba(255,255,0,0.4);  z-index:100000;}
 	.deskView .editView .currentSlide .pWrap canvas.pdfCanvas { position:relative; z-index:1; }
@@ -189,59 +194,51 @@
 /* layout : ToolBar */
     .toolBar{position:relative; height:85px; background-color:#eee; border-bottom:1px solid #ccc;-webkit-user-select:none;-moz-user-select:none; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); z-index:100; }
     .buttonBar {color:#666666;margin:0;padding:0;}
-        .buttonBar .section{display:block;position:relative; float:left; height:85px; padding-left:7px; padding-right:10px; border-left:1px solid #eee; border-right:1px solid #ccc; }
+        .buttonBar .section{display:block;position:relative; float:left; height:70px; padding: 10px 10px 0px 10px; border-right:1px solid #ccc; }
         .buttonBar .section:after{content:" ";display:block;clear:both;height:0;visibility:hidden;}
         .buttonBar .section .sectionTab{display:block; position:absolute; left:50%; bottom:0; height:15px; line-height:15px; text-align:center; color:#A9A9A9; font-size:10px; width:80px; margin-left:-40px;}
-		.buttonBar .section:first-child {  border-left:1px solid #eee; border-right:1px solid #ccc; }
-		.buttonBar .section:last-child {  border-left:1px solid #eee; border-right:1px solid #ccc; }
-		/*.buttonBar .section:hover { background-color:#f9f9f9; }*/
-        .buttonBar .section .select_wrap{display:block;}
-        .buttonBar .section .select_wrap:after{content:" ";display:block;clear:both;height:0;visibility:hidden;}
-        .buttonBar .section .select_wrap .kk_label{width:30px;font-size:12px;color:#999;display:block;line-height:30px;padding:0;float:left;}
-        .buttonBar .section .select_wrap .kk_selectbox{display:block;float:left;}
-        /*.buttonBar .section .kk_selectbox .ui_combobox{display:absolute; top:50px;}*/
-        .buttonBar .section .disabled_box{position:absolute;width:100%;height:100%;z-index:1000;}
-        .buttonBar .section .disabled_box:hover{cursor:not-allowed;z-index:1000;}
-        .buttonBar .section.disabled{color:#ccc;background-color:rgba(255,255,255,0.5);}
 
-        .buttonBar .section .ui_icon{position:relative; display:block; float:left; width:35px; height:30px; font-size:20px; margin-top:3px; margin-left:3px; line-height:30px; text-align:center; margin-left:3px; color:#666; border-radius:0px; }
-		.buttonBar .section .ui_icon.kk_selectbox .kk_arrow { display:none; }
+        .buttonBar .section .ui_icon{position:relative; display:inline-block; float:left; height:20px;color:#666;}
+        .buttonBar .section .ui_icon i{font-size:20px; margin:3px;}
+        .buttonBar .section .ui_icon_l{position:relative; display:inline-block; float:left; width:30px; height:45px; color:#666;}
+        .buttonBar .section.sec_viewer .ui_icon_l{width:48px; text-align:center;}
+		.buttonBar .section .ui_icon_l i { font-size:30px; margin:3px;}
+		
+		.enableEdit .buttonBar .sec_thumbnail .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .sec_edit .ui_icon_l:nth-child(1):after{position:absolute; top:33px; left:0; width:48px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
+		.enableEdit .buttonBar .sec_annotation .ui_icon:nth-child(1):after, .enableEdit .buttonBar .sec_annotation .ui_icon:nth-child(2):after{position:absolute; top:3px; left:20; width:30px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 		
 
-        .buttonBar .section .ui_icon_l{position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; color:#666; border-radius:0px; }
-		.buttonBar .section .ui_icon_l i { font-size:30px; }
-		.buttonBar .section .ui_icon_l::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center;}
-		.buttonBar .section .ui_icon_l.kk_selectbox {}
-        .buttonBar .section .ui_icon_l.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; color:#999; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-        .buttonBar .section .ui_icon_l.kk_selectbox .kk_arrow i { font-size:20px; }
+		/* width를 아래처럼 지정하는게 아니라 content width를 더한걸로 바꿔야됨 */
+		.enableEdit .buttonBar .section[item="1"] { width:120px; }
+		.enableEdit .buttonBar .section[item="2"] { width:95px; }
+		.enableEdit .buttonBar .section[item="2"] a { width:78px; }
+		.enableEdit .buttonBar .section[item="3"] { width:50px; }
+		.enableEdit .buttonBar .section[item="3"] a { width:50px; text-align:center;}
+		.enableEdit .buttonBar .section[item="4"] { width:300px; }
+		.enableEdit .buttonBar .section[item="4"] .shapes {display:inline-block; vertical-align:middle; width:78px; height:46px;}
+		.enableEdit .buttonBar .section[item="4"] .iconBundle a {float:left;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure {display:inline-block; vertical-align:middle; width:78px; height:46px; border:1px solid #ccc; background-color:white;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure div:nth-child(2) .ui_icon {position:absolute;}
+		.enableEdit .buttonBar .section[item="5"] { width:202px; }
+		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle; width:152px; height:46px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {width:152px; height:20px; padding-bottom:3px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {width:152px; height:20px; padding-top:3px;}
+		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:20px; height:46px;}
+		.enableEdit .buttonBar .section[item="6"] { width:30px; }
+		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){ width:30px; position:absolute; left:15px; top:33px;}
 
-        .buttonBar .section .ui_icon_m{position:relative; display:block; float:left; width:85px; padding-left:5px; height:30px; font-size:14px; margin-top:3px; margin-left:3px; line-height:30px; text-align:left; margin-left:3px; color:#666; border-radius:0px; }
-		.buttonBar .section .ui_icon_m i { font-size:20px; }
-		.buttonBar .section .ui_icon_m::after{position:absolute; top:0px; left:30px; width:50px; height:30px; line-height:35px; vertical-align:baseline; content:attr(label); font-size:12px; text-align:left;}
-        .buttonBar .section .ui_icon_m.kk_selectbox {}
-        .buttonBar .section .ui_icon_m.kk_selectbox .kk_arrow {position:absolute; right:0; top:50%; margin-top:-5px; color:#999; font-size:10px; height:10px; line-height:10px; width:20px; text-align:center; }
-        .buttonBar .section .ui_icon_m.kk_selectbox .kk_arrow i { font-size:20px; }
-
-        .buttonBar .section .ui_icon > .ui_combobox ,.buttonBar .section .ui_icon > .ui_colorpicker { top:30px; }
-        .buttonBar .section .ui_icon_m > .ui_combobox ,.buttonBar .section .ui_icon_m > .ui_colorpicker { top:30px; }
-        .buttonBar .section .ui_icon_l > .ui_combobox ,.buttonBar .section .ui_icon_l > .ui_colorpicker { top:65px; }
-    
-		.buttonBar .section .kk_selectbox { display:block;}
-		.buttonBar .section .status {position:relative;display:block;float:left;padding:0px; min-width:40px;  width:110px; height:30px;font-size:14px;line-height:30px; margin-top:3px; margin-left:3px; text-align:center; color:#666; }
-		
 
 	@media (min-width: 1180px) {
-		/* sec_save -------------------*/
-			.enableEdit .buttonBar .sec_save { width:150px; }
+			/* .enableEdit .buttonBar .sec_save { width:100px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) { }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
+			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) {position:relative; display:block; float:left; width:48px; height:63px; font-size:20px; line-height:45px; text-align:center; border-radius:0px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1)  i { font-size:30px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1)::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center;}
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox {}
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow i { font-size:20px; }
 
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(n+2){position:relative; display:block; float:left; width:85px; padding-left:5px; height:30px; font-size:14px; margin-top:3px; margin-left:3px; line-height:30px; text-align:left; margin-left:3px; color:#666; border-radius:0px; }
+			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(n+2){position:relative; display:block; float:left; padding-left:5px; height:30px; font-size:14px; line-height:30px; text-align:left; color:#666; border-radius:0px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(n+2) i { font-size:20px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(n+2)::after{position:absolute; top:0px; left:30px; width:50px; height:30px; line-height:30px; vertical-align:baseline; content:attr(label); font-size:12px; text-align:left;}
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(n+2).kk_selectbox {}
@@ -258,18 +255,20 @@
 			.enableEdit .buttonBar .sec_save[item="2"] .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
 			.enableEdit .buttonBar .sec_save[item="2"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
 
-			.enableEdit .buttonBar .sec_save[item="1"] { width:50px; }
+			.enableEdit .buttonBar .sec_save[item="1"] { width:192px; }
 			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon { }
 			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
 			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon  i { font-size:30px; }
 			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center;}
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox {}
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
 
 			.enableEdit .buttonBar .sec_save[item="0"] { display:none; width:0px; }
-		/* sec_mode -------------------*/
-			.enableEdit .buttonBar .sec_mode[item="4"] { width:210px; }
+ */
+
+
+
+
+/* 
+			.enableEdit .buttonBar .sec_mode[item="4"] { width:75px; }
 			.enableEdit .buttonBar .sec_mode[item="4"] .ui_icon {position:relative; display:block; float:left; width:95px; padding-left:5px; height:30px; font-size:14px; margin-top:3px; margin-left:3px; line-height:30px; text-align:left; margin-left:3px; border-radius:0px; }
 			.enableEdit .buttonBar .sec_mode[item="4"] .ui_icon i { font-size:20px; }
 			.enableEdit .buttonBar .sec_mode[item="4"] .ui_icon::after{position:absolute; top:0px; left:30px; width:70px; height:30px; line-height:30px; vertical-align:baseline; content:attr(label); font-size:12px; text-align:left;}
@@ -311,15 +310,25 @@
 			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
 			
 			.enableEdit .buttonBar .sec_mode[item="0"] { display:none; width:0px; }
-		/* sec_zoom -------------------*/
-			.enableEdit .buttonBar .sec_zoom   { width:190px; }
-		/* sec_rotate -------------------*/
-			.enableEdit .buttonBar .sec_rotate { width:152px; }
-			.enableEdit .buttonBar .sec_rotate .status { width: 73px !important;  }
-		/* sec_nav -------------------*/
-			.enableEdit .buttonBar .sec_nav    { width:120px; }
-		/* sec_tools -------------------*/
-			.enableEdit .buttonBar .sec_tools[item="5"]  { width:265px; }
+ */
+
+
+
+
+
+			/* .enableEdit .buttonBar .sec_zoom   { width:190px; } */
+
+
+
+			/* .enableEdit .buttonBar .sec_rotate { width:182px; }
+			.enableEdit .buttonBar .sec_rotate .status { width: 73px !important;  } */
+
+
+
+			/* .enableEdit .buttonBar .sec_nav    { width:120px; } */
+
+
+			/* .enableEdit .buttonBar .sec_tools[item="5"]  { width:30px; }
 			.enableEdit .buttonBar .sec_tools[item="4"]  { width:212px; }
 			.enableEdit .buttonBar .sec_tools[item="3"]  { width:162px; }
 			.enableEdit .buttonBar .sec_tools[item="2"]  { width:110px; }
@@ -334,15 +343,19 @@
 			.enableEdit .buttonBar .sec_tools .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
 			.enableEdit .buttonBar .sec_tools .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
 			.enableEdit .buttonBar .sec_tools .kk_selectbox .ui_combobox{display:absolute; top:65px;}
+ */
 
-		/* sec_style -------------------*/
-			.enableEdit .buttonBar .sec_style  { width:100px; }
+
+
+/* 
+
+			.enableEdit .buttonBar .sec_style  { width:30px; }
 			.enableEdit .buttonBar .sec_style .ui_icon{position:relative; display:block; float:left; width:85px; padding-left:5px; height:30px; font-size:14px; margin-top:3px; margin-left:3px; line-height:30px; text-align:left; margin-left:3px; border-radius:0px; }
 			.enableEdit .buttonBar .sec_style .ui_icon i { font-size:20px; }
 			.enableEdit .buttonBar .sec_style .ui_icon::after{position:absolute; top:0px; left:30px; width:50px; height:30px; line-height:35px; vertical-align:baseline; content:attr(label); font-size:12px; text-align:left;}
 			.enableEdit .buttonBar .sec_style .ui_icon.kk_selectbox {}
 			.enableEdit .buttonBar .sec_style .ui_icon.kk_selectbox .kk_arrow {position:absolute; right:0; top:50%; margin-top:-5px; font-size:10px; height:10px; line-height:10px; width:20px; text-align:center; }
-			.enableEdit .buttonBar .sec_style .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
+			.enableEdit .buttonBar .sec_style .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; } */
 
 	
 	

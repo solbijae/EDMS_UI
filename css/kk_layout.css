@@ -210,7 +210,7 @@
 		.enableEdit .buttonBar .section[item="2"] a {position:relative}
 		.enableEdit .buttonBar .section[item="2"] a {width:78px;}
 		.enableEdit .buttonBar .section[item="2"] a:nth-child(2) {position:absolute; left:10px; top:36px;}
-		.enableEdit .buttonBar .section[item="2"] .ui_icon:after{position:absolute; top:3px; left:20; width:30px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
+		.enableEdit .buttonBar .section[item="2"] .ui_icon:after{position:absolute; top:3px; width:50px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
 		.enableEdit .buttonBar .section[item="3"] a { width:50px; text-align:center;}
 
@@ -222,96 +222,22 @@
 
 		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle; width:152px; height:46px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {width:152px; height:20px; padding-bottom:3px;}
-		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {width:152px; height:20px; padding-top:3px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage::after {content:''; display:block; clear:both;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage .pageInfo  {margin:3px; float:left; font-size:12px; width:35px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {display:flex; justify-content:space-between; padding-top:3px; width:152px; height:20px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage #kk_zoomSlider {width:30px; font-size:12px;}
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:26px; height:46px;}
 
 		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:15px; top:33px;}
 
 
-	@media (min-width: 640px) and (max-width:849px) {
-		/* sec_save -------------------*/
-			.enableEdit .buttonBar .sec_save { width:95px; }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) { }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1)  i { font-size:30px; }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1)::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center; text-overflow:ellipsis;overflow:hidden; }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox {}
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow i { font-size:20px; }
-			.enableEdit .buttonBar .sec_save[item="2"] { width:40px; }
-			.enableEdit .buttonBar .sec_save[item="1"] { width:50px; }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon { }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon  i { font-size:30px; }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center;}
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox {}
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_save[item="1"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
-			.enableEdit .buttonBar .sec_save[item="0"] { display:none; width:0px; }
-		/* sec_mode -------------------*/
-			.enableEdit .buttonBar .sec_mode[item="4"] { width:80px; }
-			.enableEdit .buttonBar .sec_mode[item="3"] { width:95px; }
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1) { }
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1) {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1)  i { font-size:30px; }
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1)::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center; text-overflow:ellipsis;overflow:hidden;}
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1).kk_selectbox {}
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_mode[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow i { font-size:20px; }
+	@media (min-width: 755px) and (max-width:805px) {
+		.enableEdit .buttonBar .section[item="2"] a {width:26px;}
+		.enableEdit .buttonBar .section[item="2"] .ui_icon:after {display:none};
 
-			.enableEdit .buttonBar .sec_mode[item="2"] { width:40px; }
-			.enableEdit .buttonBar .sec_mode[item="1"] { width:50px; }
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon { }
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon  i { font-size:30px; }
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center;}
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon.kk_selectbox {}
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_mode[item="1"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
-
-		/* sec_zoom -------------------*/
-			.enableEdit .buttonBar .sec_zoom { width:80px; }
-			.enableEdit .buttonBar .sec_zoom #kk_zoomSlider { display:none; }
-			.enableEdit .buttonBar .sec_zoom [u-id='zoomdefault'] { display:none; }
-			.enableEdit .buttonBar .sec_zoom [u-id='fitWidth'] { display:none; }	
-			.enableEdit .buttonBar .sec_zoom [u-id='fitHeight'] { display:none; }
-		
-		/* sec_rotate -------------------*/
-			.enableEdit .buttonBar .sec_rotate { width:80px; }
-			.enableEdit .buttonBar .sec_rotate .pageInfo { display:none !important; }
-			.enableEdit .buttonBar .sec_rotate [u-id='rotateRight180'] { display:none; }
-			.enableEdit .buttonBar .sec_rotate [u-id='rotateRightAll'] { display:none; }
-
-		/* sec_nav -------------------*/
-			.enableEdit .buttonBar .sec_nav    { width:120px; }
-		/* sec_tools -------------------*/
-			.enableEdit .buttonBar .sec_tools  { width:80px; }
-			.enableEdit .buttonBar .sec_tools[item="5"]  { width:115px; }
-			.enableEdit .buttonBar .sec_tools[item="4"]  { width:80px; }
-			.enableEdit .buttonBar .sec_tools[item="3"]  { width:95px; }
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1) { }
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1) {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1)  i { font-size:30px; }
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1)::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center; text-overflow:ellipsis;overflow:hidden;}
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1).kk_selectbox {}
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_tools[item="3"] .ui_icon:nth-child(1).kk_selectbox .kk_arrow i { font-size:20px; }
-
-			.enableEdit .buttonBar .sec_tools[item="2"]  { width:40px; }
-			.enableEdit .buttonBar .sec_tools[item="1"]  { width:55px; }
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon { }
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon {position:relative; display:block; float:left; width:50px; height:63px; font-size:20px; margin-top:3px; margin-left:3px; line-height:45px; text-align:center; margin-left:3px; border-radius:0px; }
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon i { font-size:30px; }
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon::after{position:absolute; top:40px; left:0; width:50px; height:20px; line-height:20px; content:attr(label); font-size:12px; text-align:center; text-overflow:ellipsis;overflow:hidden;}
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon.kk_selectbox {}
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon.kk_selectbox .kk_arrow {position:absolute; bottom:0; left:50%; margin-left:-15px; font-size:10px; height:10px; line-height:10px; width:30px; text-align:center; }
-			.enableEdit .buttonBar .sec_tools[item="1"] .ui_icon.kk_selectbox .kk_arrow i { font-size:20px; }
-			.enableEdit .buttonBar .sec_tools[item="0"]  {display:none; }
-		/* sec_style -------------------*/	
-			.enableEdit .buttonBar .sec_style  { width:40px; }
 	}
 
-	@media (min-width: 560px) and (max-width:639px) {
+	@media (min-width: 560px) and (max-width:754px) {
 		/* sec_save -------------------*/
 			.enableEdit .buttonBar .sec_save { width:95px; }
 			.enableEdit .buttonBar .sec_save[item="3"] .ui_icon:nth-child(1) { }

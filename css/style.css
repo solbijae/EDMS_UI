@@ -76,4 +76,4 @@
     .deskView .thumbToggleBtn {background-color: #ddd;position: absolute;width: 14px;height: 100%;left: 157px;z-index: 9999;}
     .deskView .thumbToggleBtn:hover{background-color: #c4c4c4;}
     .deskView .thumbToggleBtn:active{background-color: #ccc;}
-    .deskView .thumbToggleBtn i {position: absolute;top: 50%;transform: translateY(-50%);}
+    .deskView .thumbToggleBtn i {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}

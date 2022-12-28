@@ -197,24 +197,24 @@
         .buttonBar .section{display:block;position:relative; float:left; height:70px; padding: 10px 10px 0px 10px; border-right:1px solid #ccc; }
         .buttonBar .section:after{content:" ";display:block;clear:both;height:0;visibility:hidden;}
         .buttonBar .section .sectionTab{display:block; position:absolute; left:50%; bottom:0; height:15px; line-height:15px; text-align:center; color:#A9A9A9; font-size:10px; width:80px; margin-left:-40px;}
+		
         .buttonBar .section .ui_icon{position:relative; display:inline-block; float:left; height:20px;color:#666;}
         .buttonBar .section .ui_icon i{font-size:20px; margin:3px;}
         .buttonBar .section .ui_icon_l{position:relative; display:inline-block; float:left; width:30px; height:45px; color:#666;}
         .buttonBar .section.sec_viewer .ui_icon_l{width:48px; text-align:center;}
-		.buttonBar .section .ui_icon_l i { font-size:30px; margin:3px;}
+		.buttonBar .section .ui_icon_l i {font-size:30px; margin:3px;}
 		
-		/* width를 아래처럼 지정하는게 아니라 content width를 더한걸로 바꿔야됨 */
-		.enableEdit .buttonBar .section[item="1"] { width:120px; }
 		.enableEdit .buttonBar .section[item="1"] .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .sec_edit .ui_icon_l:nth-child(1):after{position:absolute; top:33px; left:0; width:48px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
-		.enableEdit .buttonBar .section[item="2"] { width:95px; }
-		.enableEdit .buttonBar .section[item="2"] a { width:78px; }
+		/* .enableEdit .buttonBar .section[item="2"] { width:95px; } */
+
+		.enableEdit .buttonBar .section[item="2"] a {position:relative}
+		.enableEdit .buttonBar .section[item="2"] a {width:78px;}
+		.enableEdit .buttonBar .section[item="2"] a:nth-child(2) {position:absolute; left:10px; top:36px;}
 		.enableEdit .buttonBar .section[item="2"] .ui_icon:nth-child(1):after, .enableEdit .buttonBar .sec_annotation .ui_icon:nth-child(2):after{position:absolute; top:3px; left:20; width:30px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
-		.enableEdit .buttonBar .section[item="3"] { width:50px; }
 		.enableEdit .buttonBar .section[item="3"] a { width:50px; text-align:center;}
 
-		.enableEdit .buttonBar .section[item="4"] { width:300px; }
 		.enableEdit .buttonBar .section[item="4"] .shapes {display:inline-block; vertical-align:middle; width:78px; height:46px;}
 		.enableEdit .buttonBar .section[item="4"] .iconBundle a {float:left;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure {position:relative; display:inline-block; vertical-align:middle; width:100px; height:46px; border:1px solid #ccc; background-color:white;}
@@ -222,14 +222,12 @@
 		.enableEdit .buttonBar .section[item="4"] .drawFigure  .arrow {position:absolute; right:0; width:20px; height:46px;border:1px solid black;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure  .arrow a {padding-top:13px;}		
 
-		.enableEdit .buttonBar .section[item="5"] { width:202px; }
 		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle; width:152px; height:46px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {width:152px; height:20px; padding-bottom:3px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {width:152px; height:20px; padding-top:3px;}
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:20px; height:46px;}
 
-		.enableEdit .buttonBar .section[item="6"] { width:30px; }
-		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){ width:30px; position:absolute; left:15px; top:33px;}
+		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:15px; top:33px;}
 
 
 	@media (min-width: 1180px) {

@@ -212,7 +212,12 @@
 		.enableEdit .buttonBar .section[item="2"] a:nth-child(2) {position:absolute; left:10px; top:36px;}
 		.enableEdit .buttonBar .section[item="2"] .ui_icon:after{position:absolute; top:3px; width:50px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
-		.enableEdit .buttonBar .section[item="3"] a { width:50px; text-align:center;}
+		.enableEdit .buttonBar .section[item="3"] {position:relative;}
+		.enableEdit .buttonBar .section[item="3"] a {width:50px; text-align:center;}
+		.enableEdit .buttonBar .section[item="3"] .rotateDropDown {position:absolute; top:40px; left:0; border:1px solid #ccc; width:70px; background-color:#eee;}
+		.enableEdit .buttonBar .section[item="3"] .rotateDropDown a {margin-left:10px;}
+		.enableEdit .buttonBar .section[item="3"] .rotateDropDown a:not(:last-child) {margin-left:10px;border-bottom:1px solid #ddd;}
+
 
 		.enableEdit .buttonBar .section[item="4"] .shapes {display:inline-block; vertical-align:middle; width:78px; height:46px;}
 		.enableEdit .buttonBar .section[item="4"] .iconBundle {position:relative;}

@@ -88,6 +88,7 @@
 
 	@media (max-width: 672px){
 		.toolBar {display:none;}
+		#closeToolbar {display:none;}
 	}
 
 	/* ------------------------------------------ */

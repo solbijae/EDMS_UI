@@ -71,22 +71,22 @@
 		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:15px; top:33px;}
 
 
-	@media (max-width:805px) {
+	@media (max-width:855px) {
 		.enableEdit .buttonBar .section[item="2"] a {width:26px;}
 		.enableEdit .buttonBar .section[item="2"] a i::after {display:none;}
 		.enableEdit .buttonBar .section[item="1"] .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .section[item="2"] .ui_icon:after, .enableEdit .buttonBar .section[item="4"] .ui_icon_l:nth-child(1):after {display:none};
 	}
 
-	@media (max-width: 754px){
+	@media (max-width: 804px){
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage div, .enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage div {display:none;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage a:not(:nth-child(2)):not(:nth-child(4)) {display:none;}
 	}
 
-	@media (max-width: 655px){
+	@media (max-width: 705px){
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:none;}
 	}
 
-	@media (max-width: 622px){
+	@media (max-width: 672px){
 		.toolBar {display:none;}
 	}
 

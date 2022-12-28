@@ -204,14 +204,12 @@
         .buttonBar .section.sec_viewer .ui_icon_l{width:48px; text-align:center;}
 		.buttonBar .section .ui_icon_l i {font-size:30px; margin:3px;}
 		
-		.enableEdit .buttonBar .section[item="1"] .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .sec_edit .ui_icon_l:nth-child(1):after{position:absolute; top:33px; left:0; width:48px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
-
-		/* .enableEdit .buttonBar .section[item="2"] { width:95px; } */
+		.enableEdit .buttonBar .section[item="1"] .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .section[item="3"] .ui_icon_l:nth-child(1):after{position:absolute; top:33px; left:0; width:48px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
 		.enableEdit .buttonBar .section[item="2"] a {position:relative}
 		.enableEdit .buttonBar .section[item="2"] a {width:78px;}
 		.enableEdit .buttonBar .section[item="2"] a:nth-child(2) {position:absolute; left:10px; top:36px;}
-		.enableEdit .buttonBar .section[item="2"] .ui_icon:nth-child(1):after, .enableEdit .buttonBar .sec_annotation .ui_icon:nth-child(2):after{position:absolute; top:3px; left:20; width:30px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
+		.enableEdit .buttonBar .section[item="2"] .ui_icon:nth-child(1):after, .enableEdit .buttonBar .section[item="2"] .ui_icon:nth-child(2):after{position:absolute; top:3px; left:20; width:30px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
 
 		.enableEdit .buttonBar .section[item="3"] a { width:50px; text-align:center;}
 

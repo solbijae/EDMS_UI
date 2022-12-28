@@ -89,6 +89,7 @@
 	@media (max-width: 672px){
 		.toolBar {display:none;}
 		#closeToolbar {display:none;}
+		.deskView {top: 0px;}
 	}
 
 	/* ------------------------------------------ */

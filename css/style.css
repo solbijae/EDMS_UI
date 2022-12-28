@@ -58,7 +58,7 @@
     .deskView .lSideView .slideWrap:active .thumbWrap .thumb { outline:4px solid rgb(14,86,162);}
 
 /* editView */
-    .deskView .editView {position: absolute;top: 30px;left: 180px;bottom: 40px;right: 0;overflow: auto;background-color: #c4c4c4;overscroll-behavior: contain;}
+    .deskView .editView {position: absolute;left: 171px;width: 100%;height: 100%; background-color: #c4c4c4;overscroll-behavior: contain;}
     .deskView .editView .editViewWrap {width: 100%;height: 100%;padding: 0px;margin: 0px;overflow: hidden;}
     .deskView .editView .currentSlide {position: relative;margin-left: 0;margin-right: 0;}
     .editViewWrap .currentSlide {z-index: 2;}

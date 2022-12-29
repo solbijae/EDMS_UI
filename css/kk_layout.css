@@ -968,24 +968,14 @@ body.fullscreen{padding:0;margin:0;}
 
 /* editView */
 	.deskView .editView {position: absolute;left: 171px;width: 100%;height: 100%; background-color: #c4c4c4;overscroll-behavior: contain;}
-	.deskView .editView .editViewWrap {position: relative; width: 100%;height: 100%;padding: 0px;margin: 0px;overflow: hidden;}
-	.deskView .editView .editViewWrap .currentSlide {position: absolute;width: inherit;height: 100%;left: 50%;transform: translateX(-50%);}
+	.deskView .editView .editViewWrap {width: calc(100% - 171px);height: 100%;padding: 0px;margin: 0px;display: flex;flex-direction: row;justify-content: center;}
+	.deskView .editView .editViewWrap .currentSlide {width: inherit;height: 100%;}
 	.editViewWrap .currentSlide {z-index: 2;}
-	.currentSlide {position: relative;}
+	/* .currentSlide {position: relative;} */
 	.editViewWrap .pdfCanvas {z-index: 1;}
+	.currentImg {margin: 0 auto;}
 	.currentImg img {image-rendering: pixelated;image-rendering: optimizeSpeed;-ms-interpolation-mode: nearest-neighbor;}
-	.currentBox {
-		background-color: pink;
-		/* position: absolute; */
-		margin: 0 auto;
-		/* top: 0px; */
-		/* left: 495.113px; */
-		/* transform: scale(1);  */
-		width: 30%;
-		height: 100%; 
-		/* transform-origin: 0px 0px 0px;  */
-		z-index: 1;
-	}
+	.currentBox {width: 879px;height: 100%;}
 
 	.watermarkWrap {position: fixed;width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;overflow: hidden;z-index: 9999;transform-origin: 0 0;pointer-events: none;text-align: center;}
 	.watermarkWrap .kk_watermark {font-size: 1em;display: block;display: inline-block;zoom: 1;top: 0;left: 0;width: 400px;height: 400px;z-index: 10000;-webkit-user-select: none;-moz-user-select: -moz-none;-ms-user-select: none;user-select: none;transform: rotate(-22deg);}

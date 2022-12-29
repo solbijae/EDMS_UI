@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2qeu1c');
-  src:  url('fonts/icomoon.eot?2qeu1c#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2qeu1c') format('truetype'),
-    url('fonts/icomoon.woff?2qeu1c') format('woff'),
-    url('fonts/icomoon.svg?2qeu1c#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?uh5bt1');
+  src:  url('fonts/icomoon.eot?uh5bt1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uh5bt1') format('truetype'),
+    url('fonts/icomoon.woff?uh5bt1') format('woff'),
+    url('fonts/icomoon.svg?uh5bt1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-kk-icon_crop:before {
+  content: "\e925";
+}
+.icon-kk-icon_dark_mode:before {
+  content: "\e91e";
+}
+.icon-kk-icon_keyboard_arrow_down:before {
+  content: "\e91f";
+}
+.icon-kk-icon_light_mode:before {
+  content: "\e920";
+}
+.icon-kk-icon_menu:before {
+  content: "\e921";
+}
+.icon-kk-icon_north_east:before {
+  content: "\e922";
+}
+.icon-kk-icon_note:before {
+  content: "\e923";
+}
+.icon-kk-icon_storage:before {
+  content: "\e924";
+}
 .icon-kk-icon_activeEdit:before {
   content: "\e900";
 }

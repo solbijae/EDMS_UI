@@ -41,6 +41,8 @@
 		.buttonBar .section .ui_icon_l i {font-size:30px; margin:3px;}
 		
 		.enableEdit .buttonBar .section[item="1"] .ui_icon_l:nth-child(1):after, .enableEdit .buttonBar .section[item="4"] .ui_icon_l:nth-child(1):after{position:absolute; top:33px; left:0; width:48px; height:12px; line-height:12px; content:attr(label); font-size:12px; text-align:center;}
+		.enableEdit .buttonBar .section[item="1"]::after {content:''; clear:both; display:block;}
+		.enableEdit .buttonBar .section[item="1"] .iconBundle {float:left;}
 
 		.enableEdit .buttonBar .section[item="2"] a {position:relative}
 		.enableEdit .buttonBar .section[item="2"] a {width:78px;}
@@ -55,8 +57,8 @@
 
 
 		.enableEdit .buttonBar .section[item="4"] .shapes {display:inline-block; vertical-align:middle; width:78px; height:46px;}
-		.enableEdit .buttonBar .section[item="4"] .iconBundle {position:relative;}
-		.enableEdit .buttonBar .section[item="4"] .iconBundle div::after {content:''; display:block; clear:both;}
+		.enableEdit .buttonBar .section[item="4"]::after {content:''; clear:both; display:block;}
+		.enableEdit .buttonBar .section[item="4"] .iconBundle {float:left;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure {position:relative; display:inline-block; vertical-align:middle; width:100px; height:46px; border:1px solid #ccc; background-color:white;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure .arrow {position:absolute; top:0; left:81px; display:flex; align-items:center; background-color:#ddd;height:46px; width:20px;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure .arrow a i {margin:0}
@@ -64,7 +66,7 @@
 		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle;height:46px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {height:20px; padding-bottom:3px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage::after {content:''; display:block; clear:both;}
-		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage .pageInfo  {margin:3px; float:left; font-size:12px; width:35px;}
+		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage .pageInfo {margin:3px; float:left; font-size:12px; width:35px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {display:flex; justify-content:space-between; padding-top:3px; height:20px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage #kk_zoomSlider {width:30px; font-size:12px;}
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:26px; height:46px;}

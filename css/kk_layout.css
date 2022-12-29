@@ -68,7 +68,7 @@
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {display:flex; justify-content:space-between; padding-top:3px; height:20px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage #kk_zoomSlider {width:30px; font-size:12px;}
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:26px; height:46px;}
-		.enableEdit .buttonBar .section[item="5"] .brightness a:nth-child(2) {margin-top:3px;}
+		.enableEdit .buttonBar .section[item="5"] .brightness a:nth-child(2) {margin-top:6px;}
 
 		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:11px; top:33px;}
 		.enableEdit .buttonBar .section[item="6"] a i {margin:0;}

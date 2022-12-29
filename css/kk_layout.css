@@ -58,7 +58,8 @@
 		.enableEdit .buttonBar .section[item="4"] .iconBundle {position:relative;}
 		.enableEdit .buttonBar .section[item="4"] .iconBundle div::after {content:''; display:block; clear:both;}
 		.enableEdit .buttonBar .section[item="4"] .drawFigure {position:relative; display:inline-block; vertical-align:middle; width:100px; height:46px; border:1px solid #ccc; background-color:white;}
-		.enableEdit .buttonBar .section[item="4"] .drawFigure .arrow {position:absolute; top:0; left:75px; display:flex; align-items:center; background-color:#ddd;height:46px;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure .arrow {position:absolute; top:0; left:81px; display:flex; align-items:center; background-color:#ddd;height:46px; width:20px;}
+		.enableEdit .buttonBar .section[item="4"] .drawFigure .arrow a i {margin:0}
 
 		.enableEdit .buttonBar .section[item="5"] .pageEditing {display:inline-block; vertical-align:middle;height:46px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .changePage {height:20px; padding-bottom:3px;}
@@ -67,9 +68,11 @@
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage {display:flex; justify-content:space-between; padding-top:3px; height:20px;}
 		.enableEdit .buttonBar .section[item="5"] .pageEditing .zoomPage #kk_zoomSlider {width:30px; font-size:12px;}
 		.enableEdit .buttonBar .section[item="5"] .brightness {display:inline-block; vertical-align:middle; width:26px; height:46px;}
+		.enableEdit .buttonBar .section[item="5"] .brightness a:nth-child(2) {margin-top:3px;}
 
-		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:15px; top:33px;}
-
+		.enableEdit .buttonBar .section[item="6"] a:nth-child(2){width:30px; position:absolute; left:11px; top:33px;}
+		.enableEdit .buttonBar .section[item="6"] a i {margin:0;}
+		.enableEdit .buttonBar .section[item="6"] a:nth-child(2) {display:flex; justify-content:space-around;}
 
 	@media (max-width:855px) {
 		.enableEdit .buttonBar .section[item="2"] a {width:26px;}
